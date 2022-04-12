@@ -82,7 +82,7 @@
     totalQuantity = totalQuantity+lineitemquantity;
     lineitemwithtax = lineitemwithtax+(lineitemprice+getTax(lineitemprice, lineitemTax,lineitemquantity));
     totalPriceWithoutTax = totalPriceWithoutTax+lineitemprice*lineitemquantity;
-    totalPriceWithTax = totalPriceWithTax+(lineitemprice+getTax(lineitemprice, lineitemTax,lineitemquantity));
+    totalPriceWithTax = totalPriceWithTax+((lineitemprice+getTax(lineitemprice, lineitemTax,lineitemquantity))*lineitemquantity);
     console.log(totalPriceWithTax);
     
     localStorage.setItem("totalPriceWithTax", totalPriceWithTax);
